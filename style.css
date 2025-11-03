@@ -1,0 +1,33 @@
+body {
+    background-color: #1a1a1a;
+    color: #f8f8f8;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+.btn {
+    transition: all 0.2s ease-in-out;
+}
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.btn:active {
+    transform: translateY(0);
+}
+textarea {
+    resize: none;
+    transition: border-color 0.2s ease;
+}
+textarea:focus {
+    border-color: #38b2ac;
+    outline: none;
+}
+.copy-btn {
+    transition: opacity 0.3s ease;
+}
+.error-message {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.error-message.show {
+    opacity: 1;
+}
