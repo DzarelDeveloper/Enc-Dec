@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL Encoder/Decoder + Base64 Converter | DzarelDeveloper</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="min-h-screen flex flex-col">
+    <div class="container mx-auto px-4 py-8 flex-grow">
+        <h1 class="text-3xl font-bold text-center mb-2 text-teal-400">URL Encoder/Decoder + Base64 Converter</h1>
+        <p class="text-gray-400 text-center mb-8">Professional developer tool for encoding and decoding text</p>
+        
+        <div class="flex flex-col lg:flex-row gap-6">
+            <!-- Input Section -->
+            <div class="w-full lg:w-1/2">
+                <div class="bg-gray-800 rounded-lg p-4 h-full">
+                    <h2 class="text-xl font-semibold mb-2 text-teal-300">Input</h2>
+                    <textarea id="input-text" class="w-full h-64 p-3 bg-gray-900 text-white border border-gray-700 rounded-md" placeholder="Enter text to encode or decode..."></textarea>
+                </div>
+            </div>
+            
+            <!-- Output Section -->
+            <div class="w-full lg:w-1/2">
+                <div class="bg-gray-800 rounded-lg p-4 h-full">
+                    <div class="flex justify-between items-center mb-2">
+                        <h2 class="text-xl font-semibold text-teal-300">Output</h2>
+                        <button id="copy-btn" class="copy-btn bg-gray-700 hover:bg-gray-600 text-white px-3 py-1 rounded-md text-sm flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3" />
+                            </svg>
+                            Copy Output
+                        </button>
+                    </div>
+                    <textarea id="output-text" class="w-full h-64 p-3 bg-gray-900 text-white border border-gray-700 rounded-md" placeholder="Result will appear here..." readonly></textarea>
+                    <div id="error-message" class="error-message mt-2 text-red-300 text-sm"></div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Action Buttons -->
+        <div class="mt-6 bg-gray-800 rounded-lg p-4">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-4">
+                <button id="url-encode" class="btn bg-teal-600 hover:bg-teal-500 text-white py-2 px-4 rounded-md font-medium">URL Encode</button>
+                <button id="url-decode" class="btn bg-teal-600 hover:bg-teal-500 text-white py-2 px-4 rounded-md font-medium">URL Decode</button>
+                <button id="base64-encode" class="btn bg-teal-600 hover:bg-teal-500 text-white py-2 px-4 rounded-md font-medium">Base64 Encode</button>
+                <button id="base64-decode" class="btn bg-teal-600 hover:bg-teal-500 text-white py-2 px-4 rounded-md font-medium">Base64 Decode</button>
+            </div>
+            
+            <div class="flex items-center">
+                <input type="checkbox" id="url-safe" class="mr-2 h-4 w-4 text-teal-500 focus:ring-teal-400 border-gray-600 rounded">
+                <label for="url-safe" class="text-gray-300">URL-safe Base64 (use - and _ instead of + and /)</label>
+            </div>
+        </div>
+        
+        <div class="mt-6 text-center text-gray-500 text-sm">
+            Made by DzarelDeveloper — <a href="https://dzarel.com" class="text-teal-400 hover:underline">dzarel.com</a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
